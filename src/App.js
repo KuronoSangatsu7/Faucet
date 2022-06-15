@@ -33,9 +33,6 @@ function App() {
           provider,
           contract
         });
-
-      } else {
-        alert("Please install MetaMask.");
       }
     }
 
@@ -93,8 +90,17 @@ function App() {
             <span>
               <strong className="mr-2 is-align-items-center">Account: </strong>
             </span>
-              {account ? 
-              <div>{account}</div> : 
+              { account ? 
+              <div>{account}</div> :
+              !web3Api.provider ? 
+              <>
+                <div className="notification is-warning is-size-6 is-rounded">
+                  Wallet not detected!{` `}
+                  <a className="is-block" target="_blank" href="https://docs.metamask.io">
+                    Install MetaMask
+                  </a>
+                </div>
+              </> :
               <button
                 className="button is-small"
                 onClick={enableEth}
