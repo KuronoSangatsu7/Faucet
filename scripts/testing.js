@@ -89,20 +89,20 @@ async function main() {
 
   const faucetContract = await new web3.eth.Contract(faucetAbi, faucetAddress);
 
-  const num = await faucetContract.methods.numOfFunders().call()
-  .then(console.log);
+  /*const num = await faucetContract.methods.numOfFunders().call()
+  .then(console.log);*/
 
   await faucetContract.methods.addFunds().send({from:'0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266', value:1000000000000000000})
   .then(console.log)
 
-  const num1 = await faucetContract.methods.numOfFunders().call()
-  .then(console.log);
+  /*const num1 = await faucetContract.methods.numOfFunders().call()
+  .then(console.log);*/
 
   const contractBalance = await web3.eth.getBalance(faucetContract.options.address)
   .then(console.log);
 
-  const funders = await faucetContract.methods.getAllFunders().call()
-  .then(console.log);
+  /*const funders = await faucetContract.methods.getAllFunders().call()
+  .then(console.log);*/
 
 }
 
