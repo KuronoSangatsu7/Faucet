@@ -1,15 +1,30 @@
-# Basic Sample Hardhat Project
+## Faucet:
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+### Overview:
+A simple faucet Dapp on Goerli testnet.
 
-Try running some of the following tasks:
+The contract has been deployed to Goerli testnet at the following address:
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+    Faucet: 0x15245EA3667BF7A04e2131E8E9748Ac3773DCcBe
+
+The Dapp has been deployed using Vercel and can be visited at:
+
+    https://faucet-mu.vercel.app/
+
+### Tech Stack:
+
+- **Blockchain**: `Solidity`.
+
+- **Frontend**: `React.js`, `Bulma CSS`.
+
+### Features:
+- Donate ETH to the faucet.
+
+- Withdraw ETH from the faucet.
+
+### Contact Info:
+> Author: Jaffar Totanji
+
+> Email: jaafarti@gmail.com
+
+> Telegram: @KuroHata7
